@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
+
+// Components
+import Header from "./components/Header";
+import EmployForm from "./components/EmployForm";
+import Employs from "./components/Employs";
+
 
 function App() {
+
+  const [employs, setEmploys] = useState([]);
+
+  useEffect(() => {
+    axios.get('/get/')
+    .then((response) => {
+      setEmploys(response.data)
+    }).catch(() => {
+      alert('Algo fue mal!')
+    })
+  }, [])
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Header/>
+    <div className="container p-4">
+      <EmployForm employs={employs} setEmploys={setEmploys}/>
+      <Employs employs={employs} setEmploys={setEmploys}/>
     </div>
+    
+    </>
   );
 }
 
