@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import { BrowserRouter as Router, Routes as Switch, Route } from "react-router-dom";
+import Navbar from './components/NavBar';
+import HomePage from './components/HomePage';
+import ContactPage from './components/ContactPage';
+import ProductsPage from './components/ProductsPage';
+import ProgramPage from './components/ProgramPage';
+
 
 // Components
 import Header from "./components/Header";
@@ -21,16 +28,18 @@ function App() {
   }, [])
 
 
-
+//Se agrega en el Path el mismo que tiene el navbar
   return (
-    <>
-    <Header/>
-    <div className="container p-4">
-      <EmployForm employs={employs} setEmploys={setEmploys}/>
-      <Employs employs={employs} setEmploys={setEmploys}/>
-    </div>
-    
-    </>
+    <Router>
+      <Navbar />
+       
+      <Switch>
+        <Route path="/contacto" element={<ContactPage />} />   
+        <Route path="/productos" element={<ProductsPage />} />
+        <Route path="/Inicio" element={<HomePage />} />
+        <Route path="/programa" element={<ProgramPage />} />
+      </Switch>
+    </Router>
   );
 }
 

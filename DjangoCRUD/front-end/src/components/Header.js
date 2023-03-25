@@ -17,6 +17,7 @@ export default function Header() {
         <Navbar className='bar' bg='primary' variant='dark'>
             <Container>
                 <Navbar.Brand>CRUD Django Employ Equipo D</Navbar.Brand>
+               <button>home</button>
             </Container>
         </Navbar>
     )
