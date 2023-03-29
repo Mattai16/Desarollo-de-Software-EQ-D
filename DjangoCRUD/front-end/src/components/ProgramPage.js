@@ -10,15 +10,13 @@ function ProgramPage() {
   );
 }
 
-// Creamos un array con las opciones del menú
-var menu = ["Inicio", "Productos", "Servicios", "Contacto"];
+let opcion1 = "Programa 28/03/2023";
+let opcion2 = "Programa 29/03/2023";
+let opcion3 = "Programa 30/03/2023";
 
-// Creamos una función para mostrar el menú en pantalla
-function mostrarMenu() {
-  for (var i = 0; i < menu.length; i++) {
-    console.log((i + 1) + ". " + menu[i]);
-  }
-}
+let menu = `${opcion1}\n${opcion2}\n${opcion3}`;
+console.log(menu);
+
 
 // Llamamos a la función mostrarMenu() para mostrar el menú en pantalla
 mostrarMenu();
