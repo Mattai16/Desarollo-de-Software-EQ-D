@@ -5,7 +5,7 @@ function ProgramPage() {
     <div>
       <h1>Programa</h1>
       <p>Esta Pagina Mostrara el Programa</p>
-      <button>Programa</button>
+      <button>Agregar</button>
     </div>
    );
 }
