@@ -3,7 +3,7 @@ import React from 'react';
 function ProgramPage() {
   return (
     <div>
-      <h1>Programa</h1>
+      <h1>PROGRAMAS</h1>
       <p>LISTA DE PROGRAMAS "RADIO PANDA"</p>
       <button>Agregar</button>
     </div>
