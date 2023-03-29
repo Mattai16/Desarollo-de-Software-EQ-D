@@ -10,7 +10,7 @@ function ProgramPage() {
   );
 }
 
-/ Creamos un array con las opciones del menú
+// Creamos un array con las opciones del menú
 var menu = ["Inicio", "Productos", "Servicios", "Contacto"];
 
 // Creamos una función para mostrar el menú en pantalla
