@@ -4,7 +4,7 @@ function ProgramPage() {
   return (
     <div>
       <h1>Programa</h1>
-      <p>Esta Pagina Mostrara el Programa</p>
+      <p>LISTA DE PROGRAMAS "RADIO PANDA"</p>
       <button>Agregar</button>
     </div>
    );
